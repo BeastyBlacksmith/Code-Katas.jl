@@ -31,3 +31,4 @@ include( "../binary_search1.jl")
 end
 
 @benchmark chop( $(-1), $(1:10_000) )
+@btime chop( $(rand(1:10_000)), $(1:10_000) )

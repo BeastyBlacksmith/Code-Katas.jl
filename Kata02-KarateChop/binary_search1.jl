@@ -13,10 +13,10 @@ function chop( target, collection )
         if collection[spot] == target
             return offset + spot
         elseif collection[spot] > target
-            _chop( target, @view( collection[1:spot-1] ) )
+            _chop( target, collection[1:spot-1] )
         else
             offset += spot
-            _chop( target, @view( collection[spot+1:end] ) )
+            _chop( target, collection[spot+1:end] )
         end
     end
     return _chop( target, collection )

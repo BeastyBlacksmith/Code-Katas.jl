@@ -1,6 +1,7 @@
 using Base.Test
 using BenchmarkTools
 include( "../binary_search1.jl")
+# include( "../binary_search2.jl")
 
 @testset "Kata02-1" begin
 ##
@@ -30,5 +31,5 @@ include( "../binary_search1.jl")
 ##
 end
 
-@benchmark chop( $(-1), $(1:10_000) )
+@benchmark(chop( $(-1), $(1:10_000) )) |> display
 @btime chop( $(rand(1:10_000)), $(1:10_000) )

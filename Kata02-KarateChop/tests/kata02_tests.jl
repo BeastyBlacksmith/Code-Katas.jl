@@ -1,7 +1,7 @@
 using Base.Test
 using BenchmarkTools
-include( "../binary_search1.jl")
-# include( "../binary_search2.jl")
+# include( "../binary_search1.jl")
+include( "../binary_search2.jl")
 
 @testset "Kata02-1" begin
 ##
